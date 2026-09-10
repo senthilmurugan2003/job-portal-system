@@ -4,6 +4,7 @@ from config import Config
 
 from app.extensions import db, migrate, jwt
 from app.routes.profile import profile_bp
+from app.routes.jobs import jobs_bp
 from app.models import User
 from app.models import (
     User,
@@ -33,6 +34,7 @@ def create_app():
     app.register_blueprint(auth_bp)
     jwt.init_app(app)
     app.register_blueprint(profile_bp)
+    app.register_blueprint(jobs_bp)
 
     return app
 '''
