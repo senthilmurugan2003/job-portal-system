@@ -3,6 +3,7 @@ from flask import Flask
 from config import Config
 
 from app.extensions import db, migrate, jwt
+from app.routes.profile import profile_bp
 from app.models import User
 from app.models import (
     User,
@@ -31,7 +32,7 @@ def create_app():
 
     app.register_blueprint(auth_bp)
     jwt.init_app(app)
-
+    app.register_blueprint(profile_bp)
 
     return app
 '''
