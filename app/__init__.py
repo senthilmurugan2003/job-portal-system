@@ -4,6 +4,7 @@ from config import Config
 
 from app.extensions import db, migrate, jwt
 from app.models import User
+from app.models import User, JobSeeker, Recruiter
 
 def create_app():
 
