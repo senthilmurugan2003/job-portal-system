@@ -12,7 +12,6 @@ auth_bp = Blueprint(
     url_prefix="/api/auth"
 )
 
-
 @auth_bp.route("/register", methods=["POST"])
 def register():
 
@@ -87,7 +86,6 @@ def login():
     access_token = create_access_token(
         identity=str(user.id)
     )
-
     return jsonify({
         "message": "Login successful",
         "access_token": access_token,

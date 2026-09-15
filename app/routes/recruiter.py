@@ -4,7 +4,6 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from app.extensions import db
 from app.models import User, Recruiter
 
-
 recruiter_bp = Blueprint(
     "recruiter",
     __name__,
