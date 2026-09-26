@@ -8,7 +8,7 @@ load_dotenv()
 
 class Config:
 
-    SECRET_KEY = os.getenv("SECRET_KEY", "default-job-portal-secret-key-2026-super-secure-key-32bytes")
+    SECRET_KEY = os.getenv("SECRET_KEY")   
 
     _raw_db_url = os.getenv(
         "DATABASE_URL",
