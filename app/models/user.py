@@ -45,3 +45,17 @@ class User(db.Model):
         onupdate=datetime.utcnow,
         nullable=False
     )
+
+    job_seeker = db.relationship(
+        "JobSeeker",
+        backref="user",
+        uselist=False,
+        cascade="all, delete-orphan"
+    )
+
+    recruiter = db.relationship(
+        "Recruiter",
+        backref="user",
+        uselist=False,
+        cascade="all, delete-orphan"
+    )

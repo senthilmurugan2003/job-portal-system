@@ -14,7 +14,7 @@ class Company(db.Model):
 
     recruiter_id = db.Column(
         db.Integer,
-        db.ForeignKey("recruiters.id"),
+        db.ForeignKey("recruiters.id", ondelete="CASCADE"),
         unique=True,
         nullable=False
     )

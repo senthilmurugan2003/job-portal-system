@@ -14,7 +14,7 @@ class JobSeeker(db.Model):
 
     user_id = db.Column(
         db.Integer,
-        db.ForeignKey("users.id"),
+        db.ForeignKey("users.id", ondelete="CASCADE"),
         unique=True,
         nullable=False
     )
@@ -44,6 +44,16 @@ class JobSeeker(db.Model):
         nullable=True
     )
 
+    skills = db.Column(
+        db.Text,
+        nullable=True
+    )
+
+    preferred_role = db.Column(
+        db.String(100),
+        nullable=True
+    )
+
     resume_path = db.Column(
         db.String(255),
         nullable=True
@@ -53,4 +63,10 @@ class JobSeeker(db.Model):
         db.DateTime,
         default=datetime.utcnow,
         nullable=False
+    )
+
+    applications = db.relationship(
+        "Application",
+        backref="job_seeker",
+        cascade="all, delete-orphan"
     )

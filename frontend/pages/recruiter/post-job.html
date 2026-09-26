@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+JobPortal | Post Job
+</title>
+
+
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+<link rel="stylesheet" href="../../css/post-job.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="background-animation">
+
+<div class="circle circle-one"></div>
+
+<div class="circle circle-two"></div>
+
+
+</div>
+
+
+
+
+
+<!-- Sidebar -->
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+
+<div class="brand-icon">
+
+<i class="bi bi-building"></i>
+
+</div>
+
+
+<h3>
+JobPortal
+</h3>
+
+
+</div>
+
+
+
+
+
+<ul class="menu">
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="bi bi-grid"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="company.html">
+
+<i class="bi bi-building"></i>
+
+Company
+
+</a>
+
+</li>
+
+
+
+<li class="active">
+
+<a href="#">
+
+<i class="bi bi-plus-circle"></i>
+
+Post Job
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="applicants.html">
+
+<i class="bi bi-people"></i>
+
+Applicants
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+
+
+
+<div class="logout">
+
+
+<a href="../login.html">
+
+<i class="bi bi-box-arrow-right"></i>
+
+Logout
+
+</a>
+
+
+</div>
+
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- Main -->
+
+
+<section class="main-content">
+
+
+
+<div class="page-header">
+
+
+<h2>
+Post New Job
+</h2>
+
+
+<p>
+Create a new opportunity for candidates
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="job-form-card">
+
+
+
+<form id="jobForm">
+
+
+
+<div class="row">
+
+
+
+<div class="col-md-6">
+
+
+<label>
+Job Title
+</label>
+
+
+<input
+type="text"
+id="title"
+class="form-control"
+placeholder="Python Developer"
+required>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-6">
+
+
+<label>
+Location
+</label>
+
+
+<input
+type="text"
+id="location"
+class="form-control"
+placeholder="Chennai"
+required>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="row mt-3">
+
+
+<div class="col-md-6">
+
+
+<label>
+Experience
+</label>
+
+
+<input
+type="text"
+id="experience"
+class="form-control"
+placeholder="0-2 Years"
+required>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-6">
+
+
+<label>
+Job Type
+</label>
+
+
+<select
+id="jobType"
+class="form-control">
+
+
+<option>
+Full Time
+</option>
+
+
+<option>
+Internship
+</option>
+
+
+<option>
+Part Time
+</option>
+
+
+</select>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="mt-3">
+
+
+<label>
+Skills Required
+</label>
+
+
+<input
+type="text"
+id="skills"
+class="form-control"
+placeholder="Python, Flask, MySQL">
+
+
+</div>
+
+
+
+
+
+
+
+<div class="mt-3">
+
+
+<label>
+Job Description
+</label>
+
+
+<textarea
+id="description"
+class="form-control"
+rows="5"
+placeholder="Enter job description">
+
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+
+<button
+type="submit"
+class="submit-btn">
+
+
+<i class="bi bi-send"></i>
+
+Post Job
+
+
+</button>
+
+
+
+</form>
+
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<script src="../../js/auth-guard.js" data-required-role="recruiter"></script>
+<script src="../../js/post-job.js"></script>
+
+
+</body>
+
+
+</html>

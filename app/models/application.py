@@ -14,14 +14,16 @@ class Application(db.Model):
 
     job_id = db.Column(
         db.Integer,
-        db.ForeignKey("jobs.id"),
-        nullable=False
+        db.ForeignKey("jobs.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True
     )
 
     job_seeker_id = db.Column(
         db.Integer,
-        db.ForeignKey("job_seekers.id"),
-        nullable=False
+        db.ForeignKey("job_seekers.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True
     )
 
     cover_letter = db.Column(
@@ -32,7 +34,8 @@ class Application(db.Model):
     status = db.Column(
         db.String(30),
         nullable=False,
-        default="Applied"
+        default="Applied",
+        index=True
     )
 
     applied_at = db.Column(

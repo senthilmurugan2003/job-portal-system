@@ -1,9 +1,8 @@
 from flask_jwt_extended import get_jwt_identity
-
 from app.models import User
 
 
-def get_current_user():
+def check_admin():
 
     user_id = get_jwt_identity()
     if not user_id:
@@ -14,20 +13,10 @@ def get_current_user():
     except (ValueError, TypeError):
         return None
 
-    return user
-
-
-
-def recruiter_required():
-
-    user = get_current_user()
-
     if not user:
         return None
 
-
-    if user.role != "recruiter":
+    if user.role != "admin":
         return None
-
 
     return user

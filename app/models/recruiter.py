@@ -14,7 +14,7 @@ class Recruiter(db.Model):
 
     user_id = db.Column(
         db.Integer,
-        db.ForeignKey("users.id"),
+        db.ForeignKey("users.id", ondelete="CASCADE"),
         unique=True,
         nullable=False
     )
@@ -33,4 +33,11 @@ class Recruiter(db.Model):
         db.DateTime,
         default=datetime.utcnow,
         nullable=False
+    )
+
+    company = db.relationship(
+        "Company",
+        backref="recruiter",
+        uselist=False,
+        cascade="all, delete-orphan"
     )

@@ -15,7 +15,7 @@ profile_bp = Blueprint(
 @jwt_required()
 def profile():
 
-    user_id = get_jwt_identity()
+    user_id = int(get_jwt_identity())
 
     user = User.query.get(user_id)
 

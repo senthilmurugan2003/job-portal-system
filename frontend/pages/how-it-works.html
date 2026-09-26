@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPortal | How It Works</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scrolled" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-3 text-dark" href="../index.html">
+                <div class="brand-logo-icon">
+                    <i class="bi bi-briefcase-fill"></i>
+                </div>
+                <span>Job<span class="brand-accent">Portal</span></span>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <i class="bi bi-list fs-1" id="menuIcon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="how-it-works.html">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-custom px-4 py-2 text-dark border-secondary">
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                    </a>
+                    <a href="register.html" class="btn btn-primary-custom px-4 py-2">
+                        <i class="bi bi-person-plus me-1"></i> Register
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="py-6 bg-dark text-white position-relative mt-5">
+        <div class="container py-4 text-center" data-aos="fade-up">
+            <span class="badge bg-teal px-3 py-2 rounded-pill mb-3">Simple & Intuitive Steps</span>
+            <h1 class="display-4 fw-extrabold mb-3">How JobPortal Works</h1>
+            <p class="lead text-white-80 max-w-700 mx-auto">
+                Discover how our platform simplifies job hunting for candidates and talent acquisition for recruiters.
+            </p>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS MAIN CONTENT -->
+    <section class="py-6 bg-light">
+        <div class="container">
+            <!-- Workflow Nav Tabs -->
+            <ul class="nav nav-pills justify-content-center mb-5 custom-pills" id="workflowTab" role="tablist" data-aos="fade-up">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active px-4 py-3 fw-bold" id="seekers-tab" data-bs-toggle="tab" data-bs-target="#seekers-workflow" type="button" role="tab">
+                        <i class="bi bi-person-fill me-2"></i> For Job Seekers
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link px-4 py-3 fw-bold" id="recruiters-tab" data-bs-toggle="tab" data-bs-target="#recruiters-workflow" type="button" role="tab">
+                        <i class="bi bi-building-fill me-2"></i> For Recruiters
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Contents -->
+            <div class="tab-content" id="workflowTabContent">
+                <!-- Job Seekers Workflow -->
+                <div class="tab-pane fade show active" id="seekers-workflow" role="tabpanel">
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-primary">01</span>
+                                <div class="step-icon mb-3 bg-blue-light text-primary rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-person-badge fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">1. Create Profile</h5>
+                                <p class="text-muted small mb-0">Sign up in seconds, fill in your qualifications, skills, location, and upload your resume.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-teal">02</span>
+                                <div class="step-icon mb-3 bg-teal-light text-teal rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-search fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">2. Search Jobs</h5>
+                                <p class="text-muted small mb-0">Filter open vacancies by location, experience level, salary range, and job role.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-purple">03</span>
+                                <div class="step-icon mb-3 bg-purple-light text-purple rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-send-check fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">3. Apply Easily</h5>
+                                <p class="text-muted small mb-0">Submit applications with one click and track live status updates from recruiters.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-success">04</span>
+                                <div class="step-icon mb-3 bg-green-light text-success rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-check-circle-fill fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">4. Get Hired</h5>
+                                <p class="text-muted small mb-0">Connect directly with employers, schedule interviews, and secure your target job offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recruiters Workflow -->
+                <div class="tab-pane fade" id="recruiters-workflow" role="tabpanel">
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-primary">01</span>
+                                <div class="step-icon mb-3 bg-blue-light text-primary rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-building-add fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">1. Company Profile</h5>
+                                <p class="text-muted small mb-0">Register your organization details, logo, headquarters, and company overview.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-teal">02</span>
+                                <div class="step-icon mb-3 bg-teal-light text-teal rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-plus-square fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">2. Post Jobs</h5>
+                                <p class="text-muted small mb-0">Publish job postings with required skills, experience parameters, and salary ranges.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-purple">03</span>
+                                <div class="step-icon mb-3 bg-purple-light text-purple rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-people-fill fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">3. Review Candidates</h5>
+                                <p class="text-muted small mb-0">Filter candidates by qualification, download resumes, and review candidate details.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="step-card h-100 p-4 rounded-4 bg-white border shadow-sm position-relative">
+                                <span class="step-number text-success">04</span>
+                                <div class="step-icon mb-3 bg-green-light text-success rounded-circle p-3 d-inline-block">
+                                    <i class="bi bi-person-check-fill fs-3"></i>
+                                </div>
+                                <h5 class="fw-bold mb-2">4. Hire Talent</h5>
+                                <p class="text-muted small mb-0">Update application statuses to Shortlisted, Interview, or Selected to finalize hiring.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-corporate bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-3 text-white mb-3" href="../index.html">
+                        <div class="brand-logo-icon"><i class="bi bi-briefcase-fill"></i></div>
+                        <span>Job<span class="brand-accent">Portal</span></span>
+                    </a>
+                    <p class="text-white-60 mb-4">Empowering career choices and facilitating talent recruitment for enterprises worldwide.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3 text-uppercase text-primary tracking-wider">Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3 text-uppercase text-primary tracking-wider">For Candidates</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="login.html">Browse Jobs</a></li>
+                        <li><a href="register.html">Candidate Registration</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3 text-uppercase text-primary tracking-wider">For Employers</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="register.html">Recruiter Registration</a></li>
+                        <li><a href="login.html">Post a Job</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="text-center text-white-60 small">© 2026 JobPortal Inc. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

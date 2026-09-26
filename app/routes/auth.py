@@ -48,6 +48,17 @@ def register():
     db.session.add(user)
     db.session.commit()
 
+    # Automatically create profile record based on role
+    from app.models import JobSeeker, Recruiter
+    if role == "job_seeker":
+        profile = JobSeeker(user_id=user.id)
+        db.session.add(profile)
+        db.session.commit()
+    elif role == "recruiter":
+        profile = Recruiter(user_id=user.id)
+        db.session.add(profile)
+        db.session.commit()
+
     return jsonify({
         "message": "User registered successfully"
     }), 201
