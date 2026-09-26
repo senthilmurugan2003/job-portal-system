@@ -16,7 +16,7 @@
                     window.location.protocol === "file:";
 
     if (isLocal) {
-        window.API_URL = "http://127.0.0.1:5000";
+        window.API_URL = "https://web-production-0d22b.up.railway.app";
     } else {
         // 3. Live Production Backend URL (Railway)
         // After deploying to Railway, paste your Railway backend service URL here or in localStorage:
