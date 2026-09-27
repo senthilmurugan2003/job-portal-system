@@ -2,7 +2,7 @@
    API CONFIGURATION
 ========================================================= */
 
-const API_ROOT_URL = window.API_URL || (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" ? "http://127.0.0.1:5000" : (localStorage.getItem("API_URL") || "https://job-portal-production.up.railway.app"));
+const API_ROOT_URL = window.API_URL || (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" ? "http://127.0.0.1:5000" : (localStorage.getItem("API_URL") || "https://web-production-0d22b.up.railway.app"));
 const API_BASE_URL = `${API_ROOT_URL}/api/applications`;
 
 
