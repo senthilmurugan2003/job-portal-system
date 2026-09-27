@@ -67,6 +67,14 @@ def create_app():
                 if "preferred_role" not in columns:
                     db.session.execute(text("ALTER TABLE job_seekers ADD COLUMN preferred_role VARCHAR(100) NULL"))
                     db.session.commit()
+            if "users" in inspector.get_table_names():
+                user_cols = [c["name"] for c in inspector.get_columns("users")]
+                if "reset_token" not in user_cols:
+                    db.session.execute(text("ALTER TABLE users ADD COLUMN reset_token VARCHAR(255) NULL"))
+                    db.session.commit()
+                if "reset_token_expiry" not in user_cols:
+                    db.session.execute(text("ALTER TABLE users ADD COLUMN reset_token_expiry DATETIME NULL"))
+                    db.session.commit()
         except Exception as e:
             print("Auto DB Table/Column Migration Notice:", e)
 

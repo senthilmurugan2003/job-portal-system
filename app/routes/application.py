@@ -394,6 +394,7 @@ from app.models import (
     Application,
     JobSeeker
 )
+from app.services.email_service import send_shortlist_email
 
 
 # =========================================================
@@ -1140,6 +1141,24 @@ def update_application_status(application_id):
     application.status = status
 
     db.session.commit()
+
+    # -----------------------------------------
+    # Send email notification if shortlisted
+    # -----------------------------------------
+    if status == "Shortlisted":
+        try:
+            candidate = JobSeeker.query.get(application.job_seeker_id)
+            if candidate:
+                candidate_user = User.query.get(candidate.user_id)
+                if candidate_user and candidate_user.email:
+                    send_shortlist_email(
+                        to_email=candidate_user.email,
+                        candidate_name=candidate_user.name,
+                        job_title=job.title if job else "Position",
+                        company_name=company.company_name if company else "Hiring Company"
+                    )
+        except Exception as err:
+            print(f"Failed to dispatch shortlist email: {err}")
 
 
     # -----------------------------------------

@@ -46,6 +46,17 @@ class User(db.Model):
         nullable=False
     )
 
+    reset_token = db.Column(
+        db.String(255),
+        nullable=True,
+        index=True
+    )
+
+    reset_token_expiry = db.Column(
+        db.DateTime,
+        nullable=True
+    )
+
     job_seeker = db.relationship(
         "JobSeeker",
         backref="user",

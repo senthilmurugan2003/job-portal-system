@@ -28,3 +28,14 @@ class Config:
 
     # JWT Access Token Expiry duration (24 Hours)
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=24)
+
+    # Email SMTP Configuration
+    MAIL_SERVER = os.getenv("MAIL_SERVER", "smtp.gmail.com")
+    MAIL_PORT = int(os.getenv("MAIL_PORT", 587))
+    MAIL_USERNAME = os.getenv("MAIL_USERNAME", "")
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD", "")
+    MAIL_USE_TLS = os.getenv("MAIL_USE_TLS", "True").lower() in ("true", "1", "t", "yes")
+    MAIL_DEFAULT_SENDER = os.getenv("MAIL_DEFAULT_SENDER", "Job Portal <noreply@jobportal.com>")
+
+    # Frontend URL for links (Password reset, etc.)
+    FRONTEND_URL = os.getenv("FRONTEND_URL", "http://127.0.0.1:5500/frontend")
